@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>上傳文件</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>上傳文件</h1>
+    <form action="/files/upload" enctype='multipart/form-data' method="post">
+    用戶名:<input type="text" name="username"><br/><br/>
+    用戶名2:<input type="text" name="nickname"><br/><br/>
+      <input type="file" name="myFile"><br/><br/>
+      <input type="file" name="myFile2"><br/><br/>
+    <input type="submit" value="upload"> 
+  </form>
+  </body>
+</html>

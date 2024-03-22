@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>記帳列表</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <form action="/accounts" method="post">
+    <p>事項:<input type="text" name="title"></p>
+    <p>時間:<input type="date" name="time" class="event-input"></p>
+    <p>類型:<select name="type">
+        <option value="-1">支出</option>
+        <option value="1">收入</option>
+      </select></p>
+    <p>金額:<input type="text" name="account"></p>
+    <p>備註:<textarea name="remarks"></textarea></p>
+    <p><input type="submit" value="add"></p>
+  </form>
+</body>
+<!-- 月曆 evo-calendar -->
+<script src="https://www.jsdelivr.com/package/npm/evo-calendar"></script>
+
+<!-- Add jQuery library (required) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+<!-- Add the evo-calendar.js for.. obviously, functionality! -->
+<script src="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/js/evo-calendar.min.js"></script>
+<style type="text/css">
+  .container {
+    max-width: 1000px;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    gap: 8px;
+    width: 200px;
+  }
+
+  /* 月曆本體 */
+  .sidebar-hide .calendar-inner {
+    overflow: hidden;
+  }
+
+  /* 日期 */
+  tr.calendar-body .calendar-day .day {
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+  }
+
+  /* 事件點點 */
+  .event-indicator {
+    top: 120%;
+  }
+</style>
+
+</html>

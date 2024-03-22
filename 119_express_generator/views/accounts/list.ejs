@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>記帳列表</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>記帳列表</h1>
+    <% accounts.forEach(function(item) { %>
+      <% if(item.type=='1'){ %>
+        <p style="color:green"><%=item.time%>--<%=item.title%>--收入--<%=item.account%>元</p>
+      <% }else{%>
+        <p style="color:red"><%=item.time%>--<%=item.title%>--收入--<%=item.account%>元</p>
+        <%}%>
+    <% }); %>
+  </body>
+</html>
